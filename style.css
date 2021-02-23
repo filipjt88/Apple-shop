@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Poppins:400,700&display=swap');
+:root {
+    --gray1: #515365;
+    --gray2: #4e5062;
+    --gray3: #4b4d5e;
+    --gray4: #484a5a;
+    --purple: rgb(110, 37, 148);
+    --yellow: #ecd444;
+    --white: #fff;
+    --text: #444;
+    --transition: .4s ease;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    padding-left: 0;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    font-size: 16px;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: var(--yellow);
+    margin: 20px auto;
+    width: 80px;
+}
+
+h3::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: var(--gray1);
+    margin: 20px auto;
+    width: 80px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: var(--white);
+    color: var(--purple);
+    border: none;
+}
+
+/*NAVIGATION*/
+.navbar {
+    background-image:linear-gradient(to right,var(--purple), var(--yellow));
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: var(--gray2)!important;
+    transition: var(--transition);
+}
+
+.navbar-brand .fa-apple:hover {
+    color: var(--gray2)!important;
+    transition: var(--transition);
+}
+/*END OF NAVIGATION*/
+
+
+/*HEADER*/
+header {
+    background:linear-gradient(to top,var(--purple),rgba(0,0,0, .8)),url(img/header3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    color: var(--white);
+}
+
+header .button:hover {
+    background: var(--yellow);
+    color: var(--gray1);
+    transition: var(--transition);
+}
+/* END OF HEADER*/
+
+
+/* SIDEBAR */
+.sidebar .button {
+    background: transparent;
+    color: var(--yellow);
+    border: 1px solid var(--yellow);
+}
+
+.sidebar .button:hover {
+    background: var(--white);
+    color: var(--gray1);
+    transition: var(--transition);
+}
+
+.sidebar .store {
+    background-color: var(--gray1);
+    padding: 50px;
+    color: var(--white);
+}
+
+.sidebar .store i {
+    font-size: 2.5rem;
+    color: var(--yellow);
+}
+
+.sidebar .pay {
+    background-color: var(--gray2);
+    padding: 50px;
+    color: var(--white);
+}
+
+.sidebar .pay i {
+    font-size: 2.5rem;
+    color: var(--yellow);
+}
+
+.sidebar .ios {
+    background-color: var(--gray3);
+    padding: 50px;
+    color: var(--white);
+}
+
+.sidebar .ios i {
+    font-size: 2.5rem;
+    color: var(--yellow)!important;
+}
+
+.sidebar .ebay {
+    background-color: var(--gray4);
+    padding: 50px;
+    color: var(--white);
+}
+
+.sidebar .ebay i {
+     font-size: 2.5rem;
+    color: var(--yellow)!important;
+}
+
+/* END OF SIDEBAR*/
+
+
+
+/*CONTACT-US*/
+.contact-us {
+    padding: 80px;
+    background-color: var(--yellow);
+}
+
+.contact-us h3 {
+    font-weight: 700;
+}
+
+.contact-us .button {
+    margin-left: 150px;
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.contact-us .button:hover {
+    background: var(--white);
+    color: var(--purple);
+    transition: var(--transition);
+}
+/* END OF CONTACT-US*/
+
+
+
+/* FOOTER */
+footer {
+    background-color: var(--gray1);
+    padding: 50px;
+}
+
+footer .button {
+    background: transparent;
+    color: var(--yellow);
+    border: 1px solid var(--yellow);
+}
+
+footer .button:hover {
+    background: var(--white);
+    color: var(--gray1);
+    transition: var(--transition);
+}
+
+footer .col-md-7 {
+    color: var(--white);
+}
+
+footer .col-md-7 h2::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: var(--yellow);
+    margin: 20px 0px;
+    width: 80px;
+}
+
+footer .col-md-5 h2::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: var(--yellow);
+    margin: 20px 0px;
+    width: 80px;
+}
+/* END OF FOOTER*/
+
+
+/* RESPONSIVE DESIGN */
+@media(max-width:768px) {
+    header .col-md-6{
+     margin-left: 0;
+    }
+   .navbar-nav {
+    flex-direction: row;
+}
+    .navbar-nav .nav-item {
+        margin-left: 30px;
+    }
+    .mac .col-md-4 {
+        order: 1;
+        margin-top: 50px;
+    }
+    .mac h3 {
+        margin-top: 50px;
+    }
+    .mac img:nth-child(1) {
+        margin-bottom: 40px;
+    }
+    
+    .contact-us {
+        padding: 60px;
+        padding-left: 0px;
+    }
+    
+    .contact-us h3 {
+        margin-right: 20px;
+        font-size: 1.5rem;
+    }
+    .contact-us .button {
+        margin-left: 0;
+        width: 150px;
+        height: 50;
+        font-size: .7rem!important;
+    }
+    
+    footer .col-md-7 {
+         padding-bottom: 80px;
+    }
+}
+/* END OF RESPONSIVE DESIGN */
+
+
+
+
+
